@@ -1,5 +1,5 @@
 package com.sogeti.clientreview.repository;
 
-public interface SurveyRepo implements {
+public interface SurveyRepo  {
 
 }
