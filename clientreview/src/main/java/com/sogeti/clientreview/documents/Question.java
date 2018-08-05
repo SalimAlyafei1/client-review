@@ -1,4 +1,4 @@
-package com.sogeti.clientreview.repository;
+package com.sogeti.clientreview.documents;
 
 import java.util.ArrayList;
 
