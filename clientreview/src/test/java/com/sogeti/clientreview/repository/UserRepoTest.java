@@ -13,11 +13,12 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
+import com.sogeti.clientreview.CouchBaseConfig;
 import com.sogeti.clientreview.documents.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(classes = {UserRepo.class})
+@ContextConfiguration(classes = {CouchBaseConfig.class,  UserRepo.class})
 @TestExecutionListeners(listeners = {DependencyInjectionTestExecutionListener.class})
 @Configuration
 public class UserRepoTest {
