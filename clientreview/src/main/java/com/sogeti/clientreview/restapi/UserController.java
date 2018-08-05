@@ -32,7 +32,7 @@ public class UserController {
 		headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(userJsonStr.getUserId()).toUri());
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 	}
-	@GetMapping ("/userId")
+	@GetMapping ("/{userId}")
 	public ResponseEntity<User> getUser(@PathVariable String userId)
 	
 	{
