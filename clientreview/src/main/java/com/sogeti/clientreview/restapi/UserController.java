@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,13 @@ public class UserController {
 		headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(userJsonStr.getUserId()).toUri());
 		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 	}
-		
+	@GetMapping ("/userId")
+	public ResponseEntity<User> getUser(@PathVariable String userId)
+	
+	{
+		User searchUser= userService.findById(userId).get();
+		return new ResponseEntity<User>(searchUser, HttpStatus.OK);
+	}
+	
 	
 }
