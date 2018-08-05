@@ -1,4 +1,4 @@
-/*package com.sogeti.clientreview;
+package com.sogeti.clientreview;
 
 
 import java.util.Collections;
@@ -43,4 +43,4 @@ public class CouchBaseConfig extends AbstractCouchbaseConfiguration {
 	
 	
 
-}*/
+}

@@ -13,12 +13,11 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
-import com.sogeti.clientreview.CouchBaseConfig;
 import com.sogeti.clientreview.documents.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ContextConfiguration(classes = {CouchBaseConfig.class, UserRepo.class})
+@ContextConfiguration(classes = {UserRepo.class})
 @TestExecutionListeners(listeners = {DependencyInjectionTestExecutionListener.class})
 @Configuration
 public class UserRepoTest {
@@ -34,7 +33,7 @@ public class UserRepoTest {
 	public void setUp()
 	{
 	    user = new User();
-		user.setUserName("Salem");
+		user.setUserName("Salim");
 		user.setUserPassword("1234");
 		user.setUserId("1");
 		
